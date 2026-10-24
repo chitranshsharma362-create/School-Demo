@@ -1,0 +1,2 @@
+document.querySelector(".menu")?.addEventListener("click",()=>document.querySelector(".mobile-nav").classList.toggle("open"));
+["enquiryForm","contactForm"].forEach(id=>{const form=document.getElementById(id);if(form){form.addEventListener("submit",e=>{e.preventDefault();const toast=document.getElementById("toast");toast.classList.add("show");form.reset();setTimeout(()=>toast.classList.remove("show"),3500);});}});
